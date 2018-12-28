@@ -1,0 +1,23 @@
+{
+  "name": "sail-on",
+  "version": "1.0.0",
+  "description": "Optimized pathfinding",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rsgc-peterson-e/sail-on.git"
+  },
+  "author": "Ethan Peterson",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rsgc-peterson-e/sail-on/issues"
+  },
+  "homepage": "https://github.com/rsgc-peterson-e/sail-on#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.16.4"
+  }
+}
