@@ -4,12 +4,12 @@ import sys, pygrib, numpy, networkx, json
 
 def main():
     
-    a-coord = [sys.argv[0], sys.argv[1]]
-    b-coord = [sys.argv[2], sys.argv[3]]
+    acoord = [sys.argv[0], sys.argv[1]]
+    bcoord = [sys.argv[2], sys.argv[3]]
 
     for i in range(2):
-        a-coord[i] *= 4
-        b-coord[i] *= 4
+        acoord[i] *= 4
+        bcoord[i] *= 4
 
     # Open weather data files
     dirFile = pygrib.open('gfs.t12z.pgrb2.0p25.f008.VGRD')
@@ -38,6 +38,7 @@ def main():
                 })
 
     print(json.dumps(output))
+    sys.stdout.flush()
 
 def gribToDict(v, d):
 

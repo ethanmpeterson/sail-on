@@ -4,7 +4,7 @@ const app = express()
 
 app.use(cors())
 
-const port = 80
+const port = 3000
 
 const testData = {
 	"testData": [
@@ -19,7 +19,14 @@ const testData = {
 	]
 };
 
-app.get('/', (req, res) => res.send(testData))
+app.get('/', function (req, res) {
+	res.send(testData)
+})
+
+app.post('/', function (req, res) {
+	const spawn = require("child_process").spawn
+	const pythonProcess = spawn('python',["path_finding.py", '1', '2', '3', '4']);
+})
 
 app.listen(port, () => console.log(`listening on port ${port}!`))
 
