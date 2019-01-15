@@ -5,7 +5,7 @@ let {PythonShell} = require('python-shell')
 
 app.use(cors())
 
-const port = 3000
+var port = process.env.PORT || 3000;
 
 const testData = {
 	"testData": [
